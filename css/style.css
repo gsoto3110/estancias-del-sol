@@ -51,7 +51,7 @@ h5 {
 .logo {
   height: 3rem;
 
-  >a>img {
+  >a>svg {
     height: 100%;
   }
 }

@@ -112,6 +112,8 @@
   --md-sys-color-surface-container: rgb(245 237 223);
   --md-sys-color-surface-container-high: rgb(240 231 217);
   --md-sys-color-surface-container-highest: rgb(234 225 212);
+  --logo-primary: rgb(45 28 0);
+  --logo-secondary: rgb(207 138 48);
 }
 
 [data-theme="dark"] {
@@ -164,4 +166,6 @@
   --md-sys-color-surface-container: rgb(35 31 23);
   --md-sys-color-surface-container-high: rgb(45 42 33);
   --md-sys-color-surface-container-highest: rgb(56 52 43);
+  --logo-primary: rgb(255 196 102);
+  --logo-secondary: rgb(124 83 29);
 }
