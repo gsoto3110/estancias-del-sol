@@ -166,8 +166,8 @@
 
 .flatpickr-months .flatpickr-month {
   background: transparent;
-  color: rgba(0, 0, 0, 0.9);
-  fill: rgba(0, 0, 0, 0.9);
+  color: var(--md-sys-color-on-surface);
+  fill: var(--md-sys-color-on-surface);
   height: 34px;
   line-height: 1;
   text-align: center;
@@ -196,8 +196,8 @@
   height: 34px;
   padding: 10px;
   z-index: 3;
-  color: rgba(0, 0, 0, 0.9);
-  fill: rgba(0, 0, 0, 0.9);
+  color: var(--md-sys-color-on-surface);
+  fill: var(--md-sys-color-on-surface);
 }
 
 .flatpickr-months .flatpickr-prev-month.flatpickr-disabled,
@@ -246,12 +246,12 @@
       /*rtl:end:ignore*/
 .flatpickr-months .flatpickr-prev-month:hover,
 .flatpickr-months .flatpickr-next-month:hover {
-  color: #959ea9;
+  color: var(--md-sys-color-on-surface);
 }
 
 .flatpickr-months .flatpickr-prev-month:hover svg,
 .flatpickr-months .flatpickr-next-month:hover svg {
-  fill: #f64747;
+  fill: var(--md-sys-color-secondary);
 }
 
 .flatpickr-months .flatpickr-prev-month svg,
@@ -367,13 +367,15 @@
   position: absolute;
   width: 75%;
   left: 12.5%;
-  padding: 7.48px 0 0 0;
+  padding: 0;
   line-height: 1;
   height: 34px;
-  display: inline-block;
   text-align: center;
   -webkit-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flatpickr-current-month span.cur-month {
@@ -507,7 +509,7 @@ span.flatpickr-weekday {
   cursor: default;
   font-size: 90%;
   background: transparent;
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--md-sys-color-on-surface);
   line-height: 1;
   margin: 0;
   text-align: center;
@@ -578,7 +580,7 @@ span.flatpickr-weekday {
   border-radius: 150px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #393939;
+  color: var(--md-sys-color-on-surface);
   cursor: pointer;
   font-weight: 400;
   width: 14.2857143%;
