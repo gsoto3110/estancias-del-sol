@@ -367,6 +367,7 @@ h5 {
 #hoteles {
   h2 {
     margin-bottom: var(--space-x-large);
+    color: var(--md-sys-color-on-surface);
   }
 }
 
