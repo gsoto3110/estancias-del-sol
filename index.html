@@ -199,8 +199,22 @@
       altInput: true,
       altFormat: "M. j",
       mode: "range",
+      monthSelectorType: "static",
       minDate: date,
       defaultDate: [date, nextDate],
+      onChange: function(selectedDates, dateStr, instance) {
+        if (selectedDates[1] === undefined || selectedDates[0] === undefined) {
+          return;
+        }
+
+        const diffTime = selectedDates[1].getTime() - selectedDates[0].getTime();
+        const days = Math.round(diffTime / (1000 * 60 * 60 * 24));
+        
+        let nights = (days > 1) ? `${days} noches` : "1 noche";
+
+        const element = document.querySelector("label[for='dates'] span");
+        element.textContent = nights;
+      }
     }
     flatpickr("#dates", config);
   </script>
