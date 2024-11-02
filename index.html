@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="header__container">
         <div class="logo">
           <a href="index.html">
             <svg version="1.1" viewBox="0 0 401.63 91.358" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,12 @@
             </svg>
           </a>
         </div>
-        <div class="flex-container">
+        <button class="hamburger" role="button" aria-label="Menu">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+        <div class="toolbar flex-container">
           <nav class="menu flex-container">
             <a href="#inicio">Inicio</a>
             <a href="#sobre">Sobre</a>
@@ -258,4 +263,5 @@
     });
   </script>
   <script src="js/theme-switch.js"></script>
+  <script src="js/menu.js"></script>
 </html>
