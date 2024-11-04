@@ -16,3 +16,11 @@ btnMenu.addEventListener('click', () => {
     changeClass(toolbar, 'toolbar', 'toolbar--is-active');
   }
 })
+
+const menuItems = document.querySelectorAll('.menu a');
+menuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    changeClass(btnMenu, 'hamburger--is-active', 'hamburger');
+    changeClass(toolbar, 'toolbar--is-active', 'toolbar');
+  })
+})
