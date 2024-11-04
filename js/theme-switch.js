@@ -10,11 +10,6 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
   return "light";
 }
 
-function updateToggleSwitch({ toggleSwitch, isDark }) {
-  // const theme = isDark ? "dark" : "light";
-  // toggleSwitch.classList.toggle(theme)
-}
-
 function updateThemeOnHtmlEl(theme) {
   document.querySelector("html").setAttribute("data-theme", theme);
 }
@@ -26,16 +21,11 @@ const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 let currentTheme = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 updateThemeOnHtmlEl(currentTheme);
 
-updateToggleSwitch({ toggleSwitch, isDark: currentTheme === "dark" });
-updateThemeOnHtmlEl(currentTheme);
-
 toggleSwitch.addEventListener("change", () => {
   const newTheme = currentTheme === "light" ? "dark" : "light";
 
   localStorage.setItem("theme", newTheme);
-  updateToggleSwitch({ toggleSwitch, isDark: newTheme === "dark" });
   updateThemeOnHtmlEl(newTheme);
 
   currentTheme = newTheme;
-
 });
